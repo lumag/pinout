@@ -32,5 +32,5 @@ Mating Connectors
 
 
 ## Buy Now
-[Arrow](http://link.linaro.org/aerocore2-buy-arrow)
-[Gumstix](http://link.linaro.org/aerocore2-buy)
+- [Arrow](http://link.linaro.org/aerocore2-buy-arrow)
+- [Gumstix](http://link.linaro.org/aerocore2-buy)
