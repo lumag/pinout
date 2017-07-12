@@ -1,5 +1,5 @@
-GPIO-C
++5V
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|+5V    |5V System Power Supply | 5V | Power |

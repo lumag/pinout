@@ -1,5 +1,5 @@
-GPIO-C
+UART1_TxD
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|UART1_TxD     |Transmit serial data (Optional) | 1.8V |Output |

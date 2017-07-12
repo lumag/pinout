@@ -1,5 +1,5 @@
-GPIO-C
+UART0_RxD
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|UART0_RxD     | Receive serial data | 1.8V |Input |

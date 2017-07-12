@@ -1,5 +1,5 @@
-GPIO-C
+SYS_DCIN
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|SYS_DCIN    |9-18V Input Power Supply | 12V | Power |

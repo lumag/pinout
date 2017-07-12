@@ -1,5 +1,5 @@
-GPIO-C
+PCM_CLK
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|PCM_CLK     |PCM/I2S Bit clock | 1.8V |Output |

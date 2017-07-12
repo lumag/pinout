@@ -1,9 +1,9 @@
-GPIO-F
+GPIO-I
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-F     |General Purpose I/O | 1.8V |I/O |
+|GPIO-I     |General Purpose I/O | 1.8V |I/O |
 
 |Alternate Description |V  	   |	Type|
 | -------------------- |:-----:| ------:|
-|DSI_BLCTL     		   |1.8V   | Output |
+|CSI0_RST    		   |1.8V   | Output |

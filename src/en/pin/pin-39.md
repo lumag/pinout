@@ -1,1 +1,1 @@
-pin-6.md
+pin-1.md

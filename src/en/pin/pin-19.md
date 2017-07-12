@@ -1,5 +1,6 @@
-GPIO-C
+I2C1_SCL
+
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|I2C1_SCL    |Serial Clock | 1.8V |OD/PU |

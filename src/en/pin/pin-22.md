@@ -1,5 +1,5 @@
-GPIO-C
+PCM_DI
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|PCM_DI     |PCM/I2S Serial data in (Optional) | 1.8V |Input |

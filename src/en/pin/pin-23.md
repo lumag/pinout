@@ -1,5 +1,5 @@
-GPIO-C
+GPIO-A
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|GPIO-A     |General Purpose I/O | 1.8V |I/O |

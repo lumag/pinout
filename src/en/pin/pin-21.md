@@ -1,5 +1,5 @@
-GPIO-C
+I2C1_SDA
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+|I2C1_SDA    |Serial Data | 1.8V |OD/PU |
