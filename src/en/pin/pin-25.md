@@ -1,4 +1,4 @@
-GPIO-C
+#GPIO-C
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

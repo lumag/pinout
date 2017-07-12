@@ -1,4 +1,4 @@
-GPIO-B
+#GPIO-B
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

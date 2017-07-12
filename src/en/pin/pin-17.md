@@ -1,4 +1,4 @@
-I2C0_SDA
+#I2C0_SDA
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

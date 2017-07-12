@@ -1,4 +1,4 @@
-GPIO-E
+#GPIO-E
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

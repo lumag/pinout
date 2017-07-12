@@ -1,4 +1,4 @@
-PWR_BTN_N
+#PWR_BTN_N
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

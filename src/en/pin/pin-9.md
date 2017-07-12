@@ -1,4 +1,4 @@
-UART0_RTS
+#UART0_RTS
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

@@ -1,4 +1,4 @@
-UART0_TxD
+#UART0_TxD
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

@@ -1,4 +1,4 @@
-SPI0_CS
+#SPI0_CS
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

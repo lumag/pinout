@@ -1,4 +1,4 @@
-SPIO_DOUT
+#SPIO_DOUT
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

@@ -1,4 +1,4 @@
-SPI0_SCLK
+#SPI0_SCLK
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

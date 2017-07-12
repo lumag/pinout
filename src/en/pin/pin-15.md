@@ -1,4 +1,4 @@
-I2C0_SCL
+#I2C0_SCL
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

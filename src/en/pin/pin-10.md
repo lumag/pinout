@@ -1,4 +1,4 @@
-SPI0_DIN
+#SPI0_DIN
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

@@ -1,4 +1,4 @@
-UART0_CTS
+#UART0_CTS
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

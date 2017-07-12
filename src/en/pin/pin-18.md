@@ -1,4 +1,4 @@
-PCM_CLK
+#PCM_CLK
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|

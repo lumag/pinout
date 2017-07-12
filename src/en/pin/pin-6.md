@@ -1,4 +1,4 @@
-RST_BTN_N
+#RST_BTN_N
 
 |Signal        |Description |V      |Type|
 | ------------- |:--------------:| -----:|------:|
