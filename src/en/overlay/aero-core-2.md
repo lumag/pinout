@@ -18,8 +18,7 @@ Customize the AreoCore 2 for 96Boards to your project’s specific needs in [Gep
 Component | Description 
 --------- | ----------- 
 BAROMETER |	Included
-CONTROLLER AREA NETWORK (CAN) | For use in applications employing the CAN serial communication physical layer
-in accordance with the ISO 11898 standard.	 
+CONTROLLER AREA NETWORK (CAN) | For use in applications employing the CAN serial communication physical layer in accordance with the ISO 11898 standard. 
 PROCESSOR | ARM Cortex-M4 Microcontroller
 USB DEVICE | Micro B USB Plug
 5-PIN GPS CONNECTOR	 
