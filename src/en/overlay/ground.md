@@ -6,14 +6,10 @@ type: pinout
 description: Raspberry Pi Ground Pins
 pincount: 1
 pin:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
+  '1':
+  '2':
   '39':
+  '40':
 -->
 #Ground
 
