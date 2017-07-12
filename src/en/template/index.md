@@ -1,10 +1,10 @@
-#Pinout!
+# Pinout!
 
-###The comprehensive GPIO Pinout guide for the Raspberry Pi.
+### The comprehensive GPIO Pinout guide for the Consumer Edition 96Boards.
 
 This GPIO Pinout is designed to be both a quick and interactive reference to the Raspberry Pi GPIO pins, plus a comprehensive guide to your Raspberry Pi's GPIO interfaces. It also includes dozens of pinouts for Raspberry Pi add-on boards, HATs and pHATs.
 
-##Latest Pinout news
+## Latest Pinout news
 
 We've [added a board explorer](/boards)! Use it to find the pinout for a Raspberry Pi add-on board, or discover new ones. If you manufacture boards, we'd love to add yours too. [You can contribute over on GitHub](https://github.com/gadgetoid/Pinout.xyz).
 
