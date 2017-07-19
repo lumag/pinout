@@ -2,7 +2,7 @@
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
 
-[Pinout.xyz](www.96boards.org/pinout/) is the successor to the popular Pi pinout website originally hosted on [http://pi.gadgetoid.com/pinout](http://pi.gadgetoid.com/pinout).
+[The 96Boards Pinout website](www.96boards.org/pinout/) is the successor to the popular Pi pinout website originally hosted on [http://pi.gadgetoid.com/pinout](http://pi.gadgetoid.com/pinout).
 
 To support translation efforts, and allow people to build tools with the data in this repository, this website is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
@@ -10,9 +10,9 @@ This license excludes the 'pinout-graphic-horizontal' files located in the `grap
 
 # About this project
 
-The contents of this GitHub repository are used to build http://pinout.xyz and its translated subdomains.
+The contents of this GitHub repository are used to build www.96boards.org/pinout/ and its translated subdomains.
 
-This project aims to build a consistent workflow behind the Pinout.xyz front-end, gather useful information about the Raspberry Pi GPIO interface and add-on boards, and invite board manufacturers to produce their own "overlay" files which describe which pins their Pi add-ons use.
+This project aims to build a consistent workflow behind the 96Boards Pinout front-end, gather useful information about the 96Boards GPIO interface and add-on boards, and invite board manufacturers to produce their own "overlay" files which describe which pins their 96Boards add-ons use.
 
 We hope that by making this project open and extensible we will invite not only contributions of board pinouts, but translations too.
 
