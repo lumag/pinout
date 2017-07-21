@@ -1,6 +1,6 @@
-domain: pinout.xyz
+domain: 96pinout.xyz
 analytics_id: UA-69846516-1 
-base_url: /pinout/
+base_url: /96pinout/
 resource_url: /resources/
 url_suffix:
 urls:
