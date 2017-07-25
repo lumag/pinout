@@ -18,7 +18,7 @@ import urlmapper
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-GROUND_PINS = [6,9,14,20,25,30,34,39]
+GROUND_PINS = [1,2,39,40]
 
 lang = "en"
 default_strings = {
@@ -28,30 +28,30 @@ default_strings = {
     'pin_header': '{} pin header',
     'form_undefined': 'Undefined',
     'group_other': 'other',
-    'type_hat': 'HAT form-factor',
-    'type_phat': 'pHAT form-factor',
+    #'type_hat': 'HAT form-factor',
+    #'type_phat': 'pHAT form-factor',
     'type_classic': 'Classic form-factor',
-    'eeprom_detect': 'Uses VID/PID',
-    'eeprom_setup': 'Uses EEPROM',
-    'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
+    #'eeprom_detect': 'Uses VID/PID',
+    #'eeprom_setup': 'Uses EEPROM',
+    #'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
     'uses_5v': 'Needs 5v power',
-    'uses_3v3': 'Needs 3v3 power',
+    'uses_1v8': 'Needs 1v8 power',
     'uses_i2c': 'Uses I2C',
     'uses_spi': 'Uses SPI',
     'uses_n_gpio_pins': 'Uses {} GPIO pins',
-    'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
+    #'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
-    'wiring_pi_pin': 'Wiring Pi pin {}',
+    #'wiring_pi_pin': 'Wiring Pi pin {}',
     'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
     'board_schematic': 'Schematic',
     'buy_now': 'Buy Now',
-    'translate_msg': '<a href="https://github.com/gadgetoid/Pinout.xyz">This page needs translating, can you help?</a><br><br>',
-    'browse_addons': 'Browse more HATs, pHATs and add-ons',
-    'return_home': 'Return to the Raspberry Pi GPIO Pinout',
-    'boards_title': 'Raspberry Pi HATs, pHATs &amp; Add-ons',
-    'boards_subtitle': 'Click on a HAT, pHAT or add-on for more details and to see which pins it uses!'
+    'translate_msg': '<a href="https://github.com/96boards/pinout/">This page needs translating, can you help?</a><br><br>',
+    'browse_addons': 'Browse more add-ons',
+    'return_home': 'Return to the 96Boards Pinout',
+    'boards_title': '96Boards add-ons',
+    'boards_subtitle': 'Click on an add-on for more details and to see which pins it uses!'
 }
 
 
@@ -123,49 +123,49 @@ def load_overlay(overlay):
             pincount = int(loaded['pincount'])
             if 'formfactor' in loaded:
                 formfactor = str(loaded['formfactor'])
-                if pincount == 40 and formfactor == 'HAT':
-                    details.append(strings['type_hat'])
-                elif pincount == 40 and formfactor == 'pHAT':
-                    details.append(strings['type_phat'])
-                elif pincount == 40 and formfactor == '40-way':
-                    details.append(strings['pin_header'].format(pincount))
-                else:
-                    details.append(strings['pin_header'].format(pincount))
-            elif pincount == 40:
-                details.append(strings['type_hat'])
-            elif pincount == 26:
-                details.append(strings['type_classic'])
+                #if pincount == 40 and formfactor == 'HAT':
+                #    details.append(strings['type_hat'])
+                #elif pincount == 40 and formfactor == 'pHAT':
+                #    details.append(strings['type_phat'])
+                #elif pincount == 40 and formfactor == '40-way':
+                #    details.append(strings['pin_header'].format(pincount))
+                #else:
+                    #details.append(strings['pin_header'].format(pincount))
+            #elif pincount == 40:
+            #    details.append(strings['type_hat'])
+            #elif pincount == 26:
+            #    details.append(strings['type_classic'])
             else:
                 details.append(strings['pin_header'].format(pincount))
 
-        if 'eeprom' in loaded:
-            eeprom = str(loaded['eeprom'])
-            if eeprom == 'detect' or eeprom == 'True':
-                details.append(strings['eeprom_detect'])
-            if eeprom == 'setup':
-                details.append(strings['eeprom_setup'])
+        #if 'eeprom' in loaded:
+        #    eeprom = str(loaded['eeprom'])
+        #    if eeprom == 'detect' or eeprom == 'True':
+        #        details.append(strings['eeprom_detect'])
+        #    if eeprom == 'setup':
+        #        details.append(strings['eeprom_setup'])
 
         if 'power' not in loaded['type'] and 'power' in loaded:
             uses_5v = False
-            uses_3v3 = False
+            uses_1v8 = False
 
             for pin in loaded['power']:
                 pin = str(pin)
-                if pin.startswith('bcm'):
-                    pin = pinout.bcm_to_physical(pin[3:])
+                #if pin.startswith('bcm'):
+                #    pin = pinout.bcm_to_physical(pin[3:])
 
-                if pin in ['2','4']:
+                if pin in ['37']:
                     uses_5v = True
 
-                if pin in ['1','17']:
-                    uses_3v3 = True
+                if pin in ['35']:
+                    uses_1v8 = True
 
-            if uses_5v and uses_3v3:
-                details.append(strings['uses_5v_and_3v3'])
-            elif uses_5v:
-                details.append(strings['uses_5v'])
-            elif uses_3v3:
-                details.append(strings['uses_3v3'])
+            #if uses_5v and uses_3v3:
+            #    details.append(strings['uses_5v_and_3v3'])
+            #elif uses_5v:
+            #    details.append(strings['uses_5v'])
+            #elif uses_3v3:
+            #    details.append(strings['uses_3v3'])
 
         '''
         If the overlay includes a collection of pins then
@@ -179,22 +179,22 @@ def load_overlay(overlay):
             for pin in loaded['pin']:
                 data = loaded['pin'][pin]
                 pin = str(pin)
-                if pin.startswith('bcm'):
-                    pin = pinout.bcm_to_physical(pin[3:])
+                #if pin.startswith('bcm'):
+                #    pin = pinout.bcm_to_physical(pin[3:])
 
                 if pin in pinout.pins:
                     actual_pin = pinout.pins[pin]
 
-                    if actual_pin['type'] in ['+3v3', '+5v', 'GND'] and overlay != 'ground':
+                    if actual_pin['type'] in ['1v8', '+5v', 'GND'] and overlay != 'ground':
                         raise Exception(
                             "{} includes a reference to a {} pin ({}), which isn't allowed".format(overlay, actual_pin['type'], pin))
                     else:
                         uses += 1
 
                 if data is not None and 'mode' in data:
-                    if pin in ['3','5'] and data['mode'] == 'i2c':
+                    if pin in ['15','17','19','21'] and data['mode'] == 'i2c':
                         uses_i2c = True
-                    if pin in ['19','21','23'] and data['mode'] == 'spi':
+                    if pin in ['8','10','12','14'] and data['mode'] == 'spi':
                         uses_spi = True
 
             if uses > 0:
@@ -283,20 +283,20 @@ def render_pin_page(pin_num):
 
     pin_subtext.append(strings['physical_pin_n'].format(pin_num))
 
-    if 'scheme' in pin:
-        if 'bcm' in pin['scheme']:
-            bcm = pin['scheme']['bcm']
-            pin_url = 'gpio{}'.format(bcm)
+#    if 'scheme' in pin:
+#        if 'bcm' in pin['scheme']:
+#            bcm = pin['scheme']['bcm']
+#            pin_url = 'gpio{}'.format(bcm)#
+#
+#            pin_text_name = 'BCM {}'.format(bcm)
 
-            pin_text_name = 'BCM {}'.format(bcm)
-
-            pin_subtext.append('BCM pin {}'.format(bcm))
-        if 'wiringpi' in pin['scheme']:
-            wiringpi = pin['scheme']['wiringpi']
-            pin_subtext.append('Wiring Pi pin {}'.format(wiringpi))
-        if 'bcmAlt' in pin['scheme']:
-            bcmAlt = pin['scheme']['bcmAlt']
-            pin_subtext.append(strings['bcm_pin_rev1_pi'].format(bcmAlt))
+#            pin_subtext.append('BCM pin {}'.format(bcm))
+#        if 'wiringpi' in pin['scheme']:
+#            wiringpi = pin['scheme']['wiringpi']
+#            pin_subtext.append('Wiring Pi pin {}'.format(wiringpi))
+#        if 'bcmAlt' in pin['scheme']:
+#            bcmAlt = pin['scheme']['bcmAlt']
+#            pin_subtext.append(strings['bcm_pin_rev1_pi'].format(bcmAlt))
 
     if 'description' in pin:
         pin_text_name = '{} ({})'.format(pin_text_name, pin['description'])
@@ -379,9 +379,9 @@ def render_pin(pin_num, selected_url, overlay=None):
 
         pin_power = True
 
-    if 'scheme' in pin:
-        if 'bcm' in pin['scheme']:
-            bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
+    #if 'scheme' in pin:
+    #    if 'bcm' in pin['scheme']:
+    #        bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
     if overlay is not None and 'pin' in overlay and (
                         pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
@@ -391,7 +391,7 @@ def render_pin(pin_num, selected_url, overlay=None):
         elif str(pin_num) in overlay['pin']:
             overlay_pin = overlay['pin'][str(pin_num)]
         else:
-            overlay_pin = overlay['pin'][bcm_pin]
+            #overlay_pin = overlay['pin'][bcm_pin]
 
         if overlay_pin is None:
             overlay_pin = {}
@@ -404,18 +404,18 @@ def render_pin(pin_num, selected_url, overlay=None):
         if 'description' in overlay_pin:
             pin_link_title.append(overlay_pin['description'])
 
-    if 'scheme' in pin:
-        if 'bcm' in pin['scheme']:
-            bcm = pin['scheme']['bcm']
-            pin_subname = ''
+#    if 'scheme' in pin:
+#        if 'bcm' in pin['scheme']:
+#           bcm = pin['scheme']['bcm']
+#            pin_subname = ''
 
-            pin_url = 'gpio{}'.format(bcm)
-            if pin_name != '':
-                pin_subname = '<small>({})</small>'.format(pin_name)
-            pin_name = 'BCM {} {}'.format(bcm, pin_subname)
-        if 'wiringpi' in pin['scheme']:
-            wiringpi = pin['scheme']['wiringpi']
-            pin_link_title.append(strings['wiring_pi_pin'].format(wiringpi))
+#            pin_url = 'gpio{}'.format(bcm)
+#            if pin_name != '':
+#                pin_subname = '<small>({})</small>'.format(pin_name)
+#            pin_name = 'BCM {} {}'.format(bcm, pin_subname)
+#        if 'wiringpi' in pin['scheme']:
+#            wiringpi = pin['scheme']['wiringpi']
+#            pin_link_title.append(strings['wiring_pi_pin'].format(wiringpi))
 
     pin_url = base_url + slugify('pin{}_{}'.format(pin_num, pin_url))
 
