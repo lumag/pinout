@@ -57,10 +57,10 @@ def get_pin_url(pin_num, pinout):
     if pin_url == 'Ground':
         return None
 
-    if 'scheme' in pin:
-        if 'bcm' in pin['scheme']:
-            bcm = pin['scheme']['bcm']
-            pin_url = 'gpio{}'.format(bcm)
+    #if 'scheme' in pin:
+    #    if 'bcm' in pin['scheme']:
+    #        bcm = pin['scheme']['bcm']
+    #        pin_url = 'gpio{}'.format(bcm)
 
     return url_slugify('pin{}_{}'.format(pin_num, pin_url))
 
@@ -74,7 +74,7 @@ def generate_for_lang(lang="en"):
 
     base_url = pinout.get_setting('base_url', '/pinout/')
 
-    domain = pinout.get_setting('domain', 'pinout.xyz')
+    domain = pinout.get_setting('domain', '96boards.org')
 
     overlays_html = ''
 
