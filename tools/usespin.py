@@ -22,11 +22,11 @@ find_pin = sys.argv[1]
 files = glob.glob("src/en/overlay/*.md")
 
 pin_physical = str(find_pin)
-pin_bcm = "bcm{}".format(pinout.physical_to_bcm(pin_physical))
+#pin_bcm = "bcm{}".format(pinout.physical_to_bcm(pin_physical))
 
-msg = "Searching for pin: {physical}, {bcm}".format(physical=pin_physical, bcm=pin_bcm)
-print(msg)
-print(''.join('-' for x in msg))
+#msg = "Searching for pin: {physical}, {bcm}".format(physical=pin_physical, bcm=pin_bcm)
+#print(msg)
+#print(''.join('-' for x in msg))
 
 count = 0
 
@@ -45,8 +45,8 @@ for file in files:
     if data["class"] in ["board", "interface"]:
         pin = None
 
-        if pin_bcm in data["pin"]:
-            pin = data["pin"][pin_bcm]
+        #if pin_bcm in data["pin"]:
+        #    pin = data["pin"][pin_bcm]
 
         if pin_physical in data["pin"]:
             pin = data["pin"][pin_physical]
