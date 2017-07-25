@@ -11,11 +11,9 @@ We've [added a board explorer](/boards)! Use it to find the pinout for a 96Board
 ##What do these numbers mean?
 
 * Physical - Number corresponding to the pin's physical location on the header
-* 
-* 
 
-##Graphical Pinout
+## Graphical Pinout
 
 We've whipped up a simple graphical 96Boards GPIO Pinout. 
 
-[![Graphical Raspberry Pi GPIO Pinout](/resources/raspberry-pi-pinout.png)](/resources/raspberry-pi-pinout.png)
+[![Graphical 96Boards Pinout](/graphics/96Boards_pinout.png)](/graphics/96Boards_pinout.png)
