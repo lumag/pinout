@@ -286,7 +286,7 @@ pins:
   '35':
     name: +1V8 #QUOTES REQUIRED?
     description: SPI Master-In
-    type: GPIO/SPI
+    type: "+1.8v"
 
     functions:
       alt0: PCM FS
@@ -308,7 +308,7 @@ pins:
       alt5: UART1 CTS
   '37':
     name: +5V
-    type: GPIO
+    type: "+5v"
 
     functions:
       alt0: SD0 DAT2
