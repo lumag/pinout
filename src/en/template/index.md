@@ -8,7 +8,7 @@ This GPIO Pinout is designed to be both a quick and interactive reference to the
 
 We've [added a board explorer](/boards)! Use it to find the pinout for a 96Boards add-on board, or discover new ones. If you manufacture boards, we'd love to add yours too. [You can contribute over on GitHub](https://github.com/96boards/Pinout.xyz).
 
-##What do these numbers mean?
+## What do these numbers mean?
 
 * Physical - Number corresponding to the pin's physical location on the header
 
