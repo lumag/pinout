@@ -1,6 +1,6 @@
-domain: 96pinout.xyz
-analytics_id: UA-69846516-1 
-base_url: /96pinout/
+domain: 96boards.org
+analytics_id: UA-69846516-1 #change?
+base_url: /pinout/
 resource_url: /resources/
 url_suffix:
 urls:
@@ -23,3 +23,5 @@ overlays:
 - mipi-adapter-mezzanine-aistarvision
 - stm32-sensor-mezzanine-board
 - uart-serial-mezzanine
+- neon-key-mezzanine
+- arrow-link-sprite-mezzanine-kit
