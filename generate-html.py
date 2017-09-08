@@ -30,10 +30,10 @@ default_strings = {
     'group_other': 'other',
     #'type_hat': 'HAT form-factor',
     #'type_phat': 'pHAT form-factor',
-    'type_classic': 'Classic form-factor',
+    #'type_classic': 'Classic form-factor',
     #'eeprom_detect': 'Uses VID/PID',
     #'eeprom_setup': 'Uses EEPROM',
-    #'uses_5v_and_3v3': 'Needs 5v and 3v3 power',
+    'uses_5v_and_1v8': 'Needs 5v and 1v8 power',
     'uses_5v': 'Needs 5v power',
     'uses_1v8': 'Needs 1v8 power',
     'uses_i2c': 'Uses I2C',
@@ -42,14 +42,14 @@ default_strings = {
     #'bcm_pin_rev1_pi': 'BCM pin {} on Rev 1 ( very early ) Pi',
     'physical_pin_n': 'Physical pin {}',
     #'wiring_pi_pin': 'Wiring Pi pin {}',
-    'made_by': 'Made by {manufacturer}',
+    #'made_by': 'Made by {manufacturer}',
     'more_information': 'More Information',
     'github_repository': 'GitHub Repository',
     'board_schematic': 'Schematic',
     'buy_now': 'Buy Now',
-    'translate_msg': '<a href="https://github.com/96boards/pinout/">This page needs translating, can you help?</a><br><br>',
-    'browse_addons': 'Browse more add-ons',
-    'return_home': 'Return to the 96Boards Pinout',
+    'translate_msg': '<a href="https://github.com/96boards/pinout">This page needs translating, can you help?</a><br><br>',
+    'browse_addons': 'Browse more add-on boards',
+    'return_home': 'Return to the 96Boards GPIO Pinout',
     'boards_title': '96Boards add-ons',
     'boards_subtitle': 'Click on an add-on for more details and to see which pins it uses!'
 }
@@ -91,9 +91,9 @@ def load_overlay(overlay):
             loaded['source'] = "src/{}/translate/{}.md".format(lang, overlay)
             loaded['long_description'] = strings['translate_msg'] + data['html']
             loaded['type'] = strings['group_other']
-            if 'formfactor' in loaded:
-                if str(loaded['formfactor']) == 'Custom':
-                    loaded['formfactor'] = strings['form_undefined']
+            #if 'formfactor' in loaded:
+            #    if str(loaded['formfactor']) == 'Custom':
+            #        loaded['formfactor'] = strings['form_undefined']
         except IOError:
             print('overlay {} missing in lang {}'.format(overlay, lang))
             return None
@@ -109,11 +109,11 @@ def load_overlay(overlay):
         if 'type' not in loaded:
             loaded['type'] = strings['group_other']
 
-        if 'manufacturer' in loaded and 'collected' not in loaded:
-            manu_link = '<a href="/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(manufacturer=loaded['manufacturer'])
-            details.append(strings['made_by'].format(manufacturer=manu_link))
-        elif 'manufacturer' in loaded and 'collected' in loaded:
-            details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
+        #if 'manufacturer' in loaded and 'collected' not in loaded:
+            #manu_link = '<a href="/boards#manufacturer={manufacturer}">{manufacturer}</a>'.format(manufacturer=loaded['manufacturer'])
+            #details.append(strings['made_by'].format(manufacturer=manu_link))
+        #elif 'manufacturer' in loaded and 'collected' in loaded:
+        #    details.append(strings['made_by'].format(manufacturer=loaded['manufacturer']))
 
         if 'pincount' in loaded:
             '''
@@ -121,22 +121,22 @@ def load_overlay(overlay):
             This could be a HAT, a pHAT or other...
             '''
             pincount = int(loaded['pincount'])
-            if 'formfactor' in loaded:
-                formfactor = str(loaded['formfactor'])
-                #if pincount == 40 and formfactor == 'HAT':
-                #    details.append(strings['type_hat'])
-                #elif pincount == 40 and formfactor == 'pHAT':
-                #    details.append(strings['type_phat'])
-                #elif pincount == 40 and formfactor == '40-way':
-                #    details.append(strings['pin_header'].format(pincount))
-                #else:
-                    #details.append(strings['pin_header'].format(pincount))
+            #if 'formfactor' in loaded:
+               #formfactor = str(loaded['formfactor'])
+               # if pincount == 40 and formfactor == 'HAT':
+            #        details.append(strings['type_hat'])
+            #    elif pincount == 40 and formfactor == 'pHAT':
+            #        details.append(strings['type_phat'])
+            #    elif pincount == 40 and formfactor == '40-way':
+            #        details.append(strings['pin_header'].format(pincount))
+            #    else:
+            #        details.append(strings['pin_header'].format(pincount))
             #elif pincount == 40:
             #    details.append(strings['type_hat'])
             #elif pincount == 26:
             #    details.append(strings['type_classic'])
-            else:
-                details.append(strings['pin_header'].format(pincount))
+            #else:
+            #    details.append(strings['pin_header'].format(pincount))
 
         #if 'eeprom' in loaded:
         #    eeprom = str(loaded['eeprom'])
@@ -151,8 +151,8 @@ def load_overlay(overlay):
 
             for pin in loaded['power']:
                 pin = str(pin)
-                #if pin.startswith('bcm'):
-                #    pin = pinout.bcm_to_physical(pin[3:])
+                if pin.startswith('bcm'):
+                    pin = pinout.bcm_to_physical(pin[3:])
 
                 if pin in ['37']:
                     uses_5v = True
@@ -160,12 +160,12 @@ def load_overlay(overlay):
                 if pin in ['35']:
                     uses_1v8 = True
 
-            #if uses_5v and uses_3v3:
-            #    details.append(strings['uses_5v_and_3v3'])
-            #elif uses_5v:
-            #    details.append(strings['uses_5v'])
-            #elif uses_3v3:
-            #    details.append(strings['uses_3v3'])
+            if uses_5v and uses_1v8:
+                details.append(strings['uses_5v_and_1v8'])
+            elif uses_5v:
+                details.append(strings['uses_5v'])
+            elif uses_1v8:
+                details.append(strings['uses_1v8'])
 
         '''
         If the overlay includes a collection of pins then
@@ -179,13 +179,13 @@ def load_overlay(overlay):
             for pin in loaded['pin']:
                 data = loaded['pin'][pin]
                 pin = str(pin)
-                #if pin.startswith('bcm'):
-                #    pin = pinout.bcm_to_physical(pin[3:])
+                if pin.startswith('bcm'):
+                    pin = pinout.bcm_to_physical(pin[3:])
 
                 if pin in pinout.pins:
                     actual_pin = pinout.pins[pin]
 
-                    if actual_pin['type'] in ['1v8', '+5v', 'GND'] and overlay != 'ground':
+                    if actual_pin['type'] in ['+1v8', '+5v', 'GND'] and overlay != 'ground':
                         raise Exception(
                             "{} includes a reference to a {} pin ({}), which isn't allowed".format(overlay, actual_pin['type'], pin))
                     else:
@@ -283,20 +283,20 @@ def render_pin_page(pin_num):
 
     pin_subtext.append(strings['physical_pin_n'].format(pin_num))
 
-#    if 'scheme' in pin:
-#        if 'bcm' in pin['scheme']:
-#            bcm = pin['scheme']['bcm']
-#            pin_url = 'gpio{}'.format(bcm)#
-#
-#            pin_text_name = 'BCM {}'.format(bcm)
+    if 'scheme' in pin:
+        if 'bcm' in pin['scheme']:
+            bcm = pin['scheme']['bcm']
+            pin_url = 'gpio{}'.format(bcm)
 
-#            pin_subtext.append('BCM pin {}'.format(bcm))
-#        if 'wiringpi' in pin['scheme']:
-#            wiringpi = pin['scheme']['wiringpi']
-#            pin_subtext.append('Wiring Pi pin {}'.format(wiringpi))
-#        if 'bcmAlt' in pin['scheme']:
-#            bcmAlt = pin['scheme']['bcmAlt']
-#            pin_subtext.append(strings['bcm_pin_rev1_pi'].format(bcmAlt))
+            pin_text_name = 'BCM {}'.format(bcm)
+
+            pin_subtext.append('BCM pin {}'.format(bcm))
+        if 'wiringpi' in pin['scheme']:
+            wiringpi = pin['scheme']['wiringpi']
+            pin_subtext.append('Wiring Pi pin {}'.format(wiringpi))
+        if 'bcmAlt' in pin['scheme']:
+            bcmAlt = pin['scheme']['bcmAlt']
+            pin_subtext.append(strings['bcm_pin_rev1_pi'].format(bcmAlt))
 
     if 'description' in pin:
         pin_text_name = '{} ({})'.format(pin_text_name, pin['description'])
@@ -379,9 +379,9 @@ def render_pin(pin_num, selected_url, overlay=None):
 
         pin_power = True
 
-    #if 'scheme' in pin:
-    #    if 'bcm' in pin['scheme']:
-    #        bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
+    if 'scheme' in pin:
+        if 'bcm' in pin['scheme']:
+            bcm_pin = 'bcm' + str(pin['scheme']['bcm'])
 
     if overlay is not None and 'pin' in overlay and (
                         pin_num in overlay['pin'] or str(pin_num) in overlay['pin'] or bcm_pin in overlay['pin']):
@@ -391,7 +391,7 @@ def render_pin(pin_num, selected_url, overlay=None):
         elif str(pin_num) in overlay['pin']:
             overlay_pin = overlay['pin'][str(pin_num)]
         else:
-            #overlay_pin = overlay['pin'][bcm_pin]
+            overlay_pin = overlay['pin'][bcm_pin]
 
         if overlay_pin is None:
             overlay_pin = {}
@@ -404,18 +404,18 @@ def render_pin(pin_num, selected_url, overlay=None):
         if 'description' in overlay_pin:
             pin_link_title.append(overlay_pin['description'])
 
-#    if 'scheme' in pin:
-#        if 'bcm' in pin['scheme']:
-#           bcm = pin['scheme']['bcm']
-#            pin_subname = ''
+    if 'scheme' in pin:
+        if 'bcm' in pin['scheme']:
+            bcm = pin['scheme']['bcm']
+            pin_subname = ''
 
-#            pin_url = 'gpio{}'.format(bcm)
-#            if pin_name != '':
-#                pin_subname = '<small>({})</small>'.format(pin_name)
-#            pin_name = 'BCM {} {}'.format(bcm, pin_subname)
-#        if 'wiringpi' in pin['scheme']:
-#            wiringpi = pin['scheme']['wiringpi']
-#            pin_link_title.append(strings['wiring_pi_pin'].format(wiringpi))
+            pin_url = 'gpio{}'.format(bcm)
+            if pin_name != '':
+                pin_subname = '<small>({})</small>'.format(pin_name)
+            pin_name = 'BCM {} {}'.format(bcm, pin_subname)
+        if 'wiringpi' in pin['scheme']:
+            wiringpi = pin['scheme']['wiringpi']
+            pin_link_title.append(strings['wiring_pi_pin'].format(wiringpi))
 
     pin_url = base_url + slugify('pin{}_{}'.format(pin_num, pin_url))
 
@@ -553,7 +553,7 @@ featured_boards_count = 0
 featured_boards_html = ''
 
 boards_page = []
-boards_manufacturers = []
+#boards_manufacturers = []
 
 '''
 Build up the navigation between overlays. This needs to be done before rendering pages
@@ -590,28 +590,28 @@ for overlay in overlays:
         if o_class == 'board':
             image = overlay['image'] if 'image' in overlay else 'no-image.png'
 
-            if 'formfactor' not in overlay:
-                print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
+            #if 'formfactor' not in overlay:
+            #    print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
             if 'collected' not in overlay:
-                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" ><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=overlay['name'],
                     page_url=overlay['page_url'],
                     base_url=base_url,
                     type=overlay['type'] if 'type' in overlay else strings['group_other'],
-                    formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
-                    manufacturer=overlay['manufacturer'],
+                    #formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
+                    #manufacturer=overlay['manufacturer'],
                     resource_url=resource_url)})
             else:
-                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" data-manufacturer="{manufacturer}" data-form-factor="{formfactor}"><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" ><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=overlay['name'],
                     page_url=overlay['page_url'],
                     base_url=base_url,
                     type=overlay['type'] if 'type' in overlay else strings['group_other'],
-                    formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
-                    manufacturer=overlay['collected'],
+                    #formfactor=overlay['formfactor'] if 'formfactor' in overlay else strings['form_undefined'],
+                    #manufacturer=overlay['collected'],
                     resource_url=resource_url)})
 
 
@@ -738,16 +738,16 @@ for url in pages:
         feat_boards_html = ''
         body_class = 'board'
         if not 'collected' in pages[url]:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
-                    manufacturer=pages[url]['manufacturer'],
+                    #manufacturer=pages[url]['manufacturer'],
                     home=strings['home'],
                     boards=strings['boards']
                     )
         else:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; <a href="/boards#manufacturer={manufacturer}">{manufacturer}</a></p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
-                    manufacturer=pages[url]['collected'],
+                    #manufacturer=pages[url]['collected'],
                     home=strings['home'],
                     boards=strings['boards']
                     )

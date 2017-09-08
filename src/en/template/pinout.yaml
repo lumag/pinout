@@ -1,198 +1,163 @@
 ---
-name: 96Boards Pinout
+name: 96Boards GPIO Pinout
 pins:
+  
   '1':
     name: Ground
     type: GND
-    
+  
   '2':
     name: Ground
     type: GND
   
   '3':
-    name: UART0_CTS
-    description: Clear to Send control
+    name: UART0_CTS  
     type: UART
-
+  
   '4':
     name: PWR_BTN_N
-    description: Power on/off external request
-    type: INPUT
- 
- '5':
+    type: "+5v"
+  
+  '5':
     name: UART0_TxD
-    description: Transmit Serial data 
     type: UART
 
   '6':
     name: RST_BTN_N
-    description: Reset External request
-    type: INPUT
-  
+    type: GPIO
+
   '7':
     name: UART0_RxD
-    description: Receive Serial data
     type: UART
 
   '8':
     name: SPI0_SCLK
-    description: Serial Clock
     type: SPI
-
+  
   '9':
     name: UART0_RTS
-    description: Request to Send Control
     type: UART
-    
+  
   '10':
     name: SPI0_DIN
-    description: Data In
     type: SPI
-
+  
   '11':
     name: UART1_TxD
-    description: Transmit Serial data
     type: UART
-
+  
   '12':
     name: SPI0_CS
-    description: Chip Select
     type: SPI
-
+  
   '13':
     name: UART1_RxD
-    description: Receive Serial data
     type: UART
-
+  
   '14':
     name: SPI0_DOUT
-    description: Data Out
     type: SPI
-    
+  
   '15':
     name: I2C0_SCL
-    description: Serial Clock
     type: I2C
-
+  
   '16':
     name: PCM_FS
-    description: PCM/I2S Word Clock
     type: PCM
 
   '17':
     name: I2C0_SDA
-    description: Serial data
     type: I2C
-    
+  
   '18':
     name: PCM_CLK
-    description: PCM/I2S Bit clock
     type: PCM
 
   '19':
     name: I2C1_SCL
-    description: Serial Clock
     type: I2C
-
+  
   '20':
     name: PCM_DO
-    description: PCM/I2S Serial data out
     type: PCM
   
   '21':
     name: I2C1_SDA
-    description: Serial Data
     type: I2C
-
+  
   '22':
     name: PCM_DI
-    description: PCM/I2S Serial data in
     type: PCM
-
+  
   '23':
     name: GPIO-A
-    description: General Purpose I/O
     type: GPIO
-
+  
   '24':
     name: GPIO-B
-    description: General Purpose I/O
     type: GPIO
-
+  
   '25':
     name: GPIO-C
-    description: General Purpose I/O
     type: GPIO
-    
+
   '26':
     name: GPIO-D
-    description: General Purpose I/O
     type: GPIO
-
+  
   '27':
     name: GPIO-E
-    description: General Purpose I/O
     type: GPIO
-
+  
   '28':
     name: GPIO-F
-    description: General Purpose I/O
     type: GPIO
-
+  
   '29':
     name: GPIO-G
-    description: General Purpose I/O
     type: GPIO
-
+  
   '30':
     name: GPIO-H
-    description: General Purpose I/O
     type: GPIO
-    
+  
   '31':
     name: GPIO-I
-    description: General Purpose I/O
     type: GPIO
-
+  
   '32':
     name: GPIO-J
-    description: General Purpose I/O
     type: GPIO
-
+  
   '33':
     name: GPIO-K
-    description: General Purpose I/O
     type: GPIO
-
+  
   '34':
     name: GPIO-L
-    description: General Purpose I/O
     type: GPIO
-    
+  
   '35':
-    name: +1V8 
-    description: 1.8V Power reference (max 0.1A)
-    type: "+1.8v"
-
+    name: +1V8
+    type: GPIO/SPI
+  
   '36':
     name: SYS_DCIN
-    description: 9-18V Input Power Supply
-    type: Power
-      
+    type: GPIO
+  
   '37':
     name: +5V
-    description: 5V System Power Supply
-    type: "+5v"
-      
+    type: GPIO
+  
   '38':
     name: SYS_DCIN
-    description: 9-18V Input Power Supply
-    type: Power
-
+    type: GPIO/SPI
+  
   '39':
     name: Ground
     type: GND
-    
+  
   '40':
     name: Ground
     type: GND

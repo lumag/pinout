@@ -1,5 +1,11 @@
-#SPIO_DOUT
+### Signal:
+SPI0_DOUT 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|SPI0_DOUT     |Data Out | 1.8V |Output |
+### Description:
+Data Out
+
+### Voltage:
+1.8V
+
+### Type:
+Output

@@ -1,8 +1,14 @@
-#GPIO-A
+### Signal:
+GPIO-A
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|GPIO-A     |General Purpose I/O | 1.8V |I/O |
+### Description:
+PCM/I2S Serial data out
 
-## Special Function:
+### Voltage:
+1.8V
+
+### Type:
+I/O
+
+### Special Function:
 GPIO-A is capable of waking up the SoC from sleep.

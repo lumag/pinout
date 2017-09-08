@@ -1,5 +1,11 @@
-#SPI0_CS
+### Signal:
+SPI0_CS 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|SPI0_CS    |Chip Select | 1.8V |Output |
+### Description:
+Chip Select
+
+### Voltage:
+1.8V
+
+### Type:
+Output

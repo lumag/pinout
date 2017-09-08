@@ -1,5 +1,11 @@
-#UART1_RxD
+### Signal:
+UART1_RxD 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|UART1_xD     |Receive serial data (Optional) | 1.8V |Input |
+### Description:
+Receive serial data (Optional)
+
+### Voltage:
+1.8V
+
+### Type:
+Input

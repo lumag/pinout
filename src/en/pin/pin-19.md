@@ -1,6 +1,11 @@
-#I2C1_SCL
+### Signal:
+I2C1_SCL 
 
+### Description:
+Serial Clock
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|I2C1_SCL    |Serial Clock | 1.8V |OD/PU |
+### Voltage:
+1.8V
+
+### Type:
+OD/PU

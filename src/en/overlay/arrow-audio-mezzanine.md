@@ -1,7 +1,40 @@
+<!--
+---
+name: Arrow Audio Mezzanine
+class: board
+type: Mezzanine
+description: Grove interfaced expansion board intended for 96boards
+url: https://www.96boards.org/product/audio-mezzanine/
+github: https://github.com/96boards/documentation/tree/master/mezzanine/audio-mezzanine
+buy: https://www.arrow.com/en/products/audiomezz/seeed-technology-limited
+image: 'arrow-audio-mezzanine.png'
+pincount: 40
+eeprom: no
+power:
+  '35':
+  '37':
+ground:
+  '1':
+  '2':
+  '39':
+  '40':
+pin:
+  '15':
+    mode: i2c
+  '17':
+    mode: i2c
+  '19':
+    mode: i2c
+  '21':
+    mode: i2c
+
+-->
+
+
 # Arrow Audio Mezzanine
 This Audio Mezzanine Board is a Grove interfaced expansion board intended for 96boards. You can connect 96Boards to various modules easily with this expansion board. There are six grove ports which can be used to connect rich Grove functional modules, which will make your application more complicated and attracting. In addition, this expansion board gets one 3.5 mm audio port and two independent MICs which can be applied into multimedia processing. Since 96Boards I/O voltage is set at 1.8 V, so it cannot be connected directly to embedded world. This expansion board has used voltage converting circuit so that you can choose 3.3V/5V as the output voltage. Other features are also embedded on this expansion board such as USB to Serial circuit and reset button, and so on, all those make 96Boards more conveniently to build applications.
 
-## Specification
+### Specification
 - Input Voltage: 6.5~18V(DC Input)
 - Operating Voltage: 1.8/3.3/5V
 - No-load Current: 30mA
@@ -9,7 +42,7 @@ This Audio Mezzanine Board is a Grove interfaced expansion board intended for 96
 - Weight: 28g
 - Location hole diameter: 2.5mm
 
-## Features
+### Features
 - 6 x On-board Grove connector
 - 2x I2C
 - 1x UART
@@ -28,5 +61,5 @@ This Audio Mezzanine Board is a Grove interfaced expansion board intended for 96
 - Power and Reset/Volume down buttons
 - Pass through stacking connectors so that other Mezzanine cards may be stacked on top of the AMB
 
-## Buy Now
+### Buy Now
 [Arrow Electronics](https://www.arrow.com/en/products/audiomezz/seeed-technology-limited)

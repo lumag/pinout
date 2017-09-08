@@ -1,5 +1,11 @@
-#SPI0_DIN
+### Signal:
+SPI0_DIN 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|SPI0_DIN     |Data In | 1.8V |Input |
+### Description:
+Data In 
+
+### Voltage:
+1.8V
+
+### Type:
+Input

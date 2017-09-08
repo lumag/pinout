@@ -5,39 +5,23 @@ class: board
 type: other
 formfactor: Custom
 manufacturer: Company
-description: An add-on board for the Raspberry Pi
+description: An add-on board for 96Boards
 url: https://my-addon-board.com
 github: https://github.com/my-addon-board-repo.com
 schematic: https://my-addon-board-schematic.com
 buy: http://buy-my-addon-board.com
 image: 'image.png'
 pincount: 40
-eeprom: no
 power:
+  '':
+  '':
+ground:
   '1':
   '2':
-ground:
-  '6':
-  '9':
-  '14':
-  '20':
-  '25':
-  '30':
-  '34':
   '39':
+  '40':
 pin:
-  '3':
-    mode: i2c
-  '5':
-    mode: i2c
-  '7':
-    name: Enable
-    mode: output
-    active: high
-i2c:
-  '0x00':
-    name: device display name
-    device: chip name
+
 -->
 #my add-on board
 
@@ -46,10 +30,8 @@ Use this section to provide additional information such as features, technical p
 The overlay itself uses the following fields, some of which are mandatory, as noted below:
 
 MANDATORY
-* name: the board name as it will appear at pinout.xyz
+* name: the board name as it will appear at 96boards/pinout
 * class: the class the overlay falls in, 'board' is the most common (use that if in doubt).
-* type: the typical applications of the board, i.e 'lcd' (use 'other' if in doubt). If multiple types apply, use a comma separated list (for example, 'adc,motor'). The keywords submitted will be used to filter boards on the site so don't include anything but tags that are relevant to the key functionality of the board.
-* formfactor: the board's form factor. Valid values are Custom, HAT and pHAT. Note that an EEPROM is required for HAT specs, use Custom if that is not the case.
 * manufacturer: the manufacturer's name.
 * description: a description of what the add-on board provides.
 * url: the main URL for the product providing detailed technical information about the board.

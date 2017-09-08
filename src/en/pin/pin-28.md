@@ -1,13 +1,17 @@
-GPIO-F
+### Signal:
+GPIO-F 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|GPIO-F     |General Purpose I/O | 1.8V |I/O |
+### Description:
+General Purpose I/O
 
-##Special Function:
+### Voltage:
+1.8V
 
+### Type:
+I/O
+
+### Special Function:
 GPIO-F has an alternate function for DSI control if required by the display/sensor.
-
-|Alternate Description |V  	   |	Type|
-| -------------------- |:-----:| ------:|
-|DSI_BLCTL     		   |1.8V   | Output |
+#### Alternate Description: DSI_BLCTL  
+#### Voltage: 1.8V
+#### Type: Output

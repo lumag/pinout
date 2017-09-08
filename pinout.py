@@ -57,45 +57,45 @@ def render_html(*args, **kwargs):
     return html
 
 
-#def bcm_to_physical(pin):
-#    return physical_from(pin, 'bcm')
+def bcm_to_physical(pin):
+    return physical_from(pin, 'bcm')
 
 
-#def wiringpi_to_physical(pin):
-#    return physical_from(pin, 'wiringpi')
+def wiringpi_to_physical(pin):
+    return physical_from(pin, 'wiringpi')
 
 
-#def physical_from(pin, scheme='bcm'):
-#    if scheme in ['bcm', 'wiringpi']:
-#        for idx in pins:
-#            compare_pin = pins[idx]
-#            if 'scheme' in compare_pin:
-#                if scheme in compare_pin['scheme']:
-#                    if compare_pin['scheme'][scheme] == int(pin):
+def physical_from(pin, scheme='bcm'):
+    if scheme in ['bcm', 'wiringpi']:
+        for idx in pins:
+            compare_pin = pins[idx]
+            if 'scheme' in compare_pin:
+                if scheme in compare_pin['scheme']:
+                    if compare_pin['scheme'][scheme] == int(pin):
                         #print("Mapping {}{} to {}".format(scheme, pin, str(idx)))
-#                        return str(idx)
-#    elif scheme == 'physical':
-#        return pin
-#    return None
+                        return str(idx)
+    elif scheme == 'physical':
+        return pin
+    return None
 
 
-#def physical_to_bcm(pin):
-#    return physical_to(pin, 'bcm')
+def physical_to_bcm(pin):
+    return physical_to(pin, 'bcm')
 
 
-#def physical_to_wiringpi(pin):
-#    return physical_to(pin, 'wiringpi')
+def physical_to_wiringpi(pin):
+    return physical_to(pin, 'wiringpi')
 
 
-#def physical_to(pin, scheme='bcm'):
-#    if scheme in ['bcm', 'wiringpi']:
-#        pin = pins[pin]
-#        if 'scheme' in pin:
-#            if scheme in pin['scheme']:
-#                return str(pin['scheme'][scheme])
-#    elif scheme == 'physical':
-#        return pin
-#    return None
+def physical_to(pin, scheme='bcm'):
+    if scheme in ['bcm', 'wiringpi']:
+        pin = pins[pin]
+        if 'scheme' in pin:
+            if scheme in pin['scheme']:
+                return str(pin['scheme'][scheme])
+    elif scheme == 'physical':
+        return pin
+    return None
 
 
 def load(lang='en'):

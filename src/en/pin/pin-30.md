@@ -1,13 +1,17 @@
+### Signal:
 GPIO-H
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|GPIO-H     |General Purpose I/O | 1.8V |I/O |
+### Description:
+General Purpose I/O
 
-##Special Function:
+### Voltage:
+1.8V
 
+### Type:
+I/O
+
+### Special Function:
 GPIO-H has an alternate function for DSI control if required by the display/sensor.
-
-|Alternate Description |V  	   |	Type|
-| -------------------- |:-----:| ------:|
-|DSI_RST    		   |1.8V   | Output |
+#### Alternate Description: DSI_RST 
+#### Voltage: 1.8V
+#### Type: Output
