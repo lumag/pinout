@@ -1,5 +1,11 @@
-#PCM_CLK
+### Signal:
+PCM_CLK 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|PCM_CLK     |PCM/I2S Bit clock | 1.8V |Output |
+### Description:
+PCM/I2S Bit clock
+
+### Voltage:
+1.8V
+
+### Type:
+Output 

@@ -1,5 +1,11 @@
-#I2C0_SDA
+### Signal:
+I2C0_SDA
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|I2C0_SDA    |Serial Data | 1.8V |OD/PU |
+### Description:
+Serial Data 
+
+### Voltage:
+1.8V
+
+### Type:
+OD/PU

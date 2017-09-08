@@ -1,6 +1,11 @@
-#PWR_BTN_N
+### Signal:
+PWR_BTN_N 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|PWR_BTN_N     | Power on/off external request | 1.8V |Input |
+### Description:
+Power on/off external request
 
+### Voltage:
+1.8V
+
+### Type:
+Input

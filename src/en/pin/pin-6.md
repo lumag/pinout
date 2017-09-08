@@ -1,5 +1,11 @@
-#RST_BTN_N
+### Signal:
+RST_BTN_N 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|RST_BTN_N     | Reset external request | 1.8V |Input |
+### Description:
+Reset external request
+
+### Voltage:
+1.8V
+
+### Type:
+Input

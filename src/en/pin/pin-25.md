@@ -1,5 +1,11 @@
-#GPIO-C
+### Signal:
+GPIO-C 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|GPIO-C     |General Purpose I/O | 1.8V |I/O |
+### Description:
+General Purpose I/O
+
+### Voltage:
+1.8V
+
+### Type:
+I/O

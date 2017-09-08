@@ -1,5 +1,11 @@
-#UART0_RTS
+### Signal:
+UART0_RTS 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|UART0_RTS     | Request to Send control | 1.8V |Output |
+### Description:
+Request to Send control 
+
+### Voltage:
+1.8V
+
+### Type:
+Output

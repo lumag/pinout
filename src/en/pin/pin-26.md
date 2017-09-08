@@ -1,5 +1,11 @@
-#GPIO-D
+### Signal:
+GPIO-D 
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|GPIO-D     |General Purpose I/O | 1.8V |I/O |
+### Description:
+General Purpose I/O
+
+### Voltage:
+1.8V
+
+### Type:
+I/O

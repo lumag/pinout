@@ -1,5 +1,11 @@
-#GPIO-B
+### Signal:
+GPIO-B
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|GPIO-B    |General Purpose I/O | 1.8V |I/O |
+### Description:
+General Purpose I/O
+
+### Voltage:
+1.8V
+
+### Type:
+I/O 

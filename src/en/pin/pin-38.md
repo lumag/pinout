@@ -1,5 +1,11 @@
+### Signal:
 SYS_DCIN
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|SYS_DCIN    |9-18V Input Power Supply | 12V | Power |
+### Description:
+9-18V Input Power Supply
+
+### Voltage:
+12V
+
+### Type:
+Power

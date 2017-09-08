@@ -2,7 +2,7 @@ import json
 import sys
 
 
-db = json.load(open('pi-pinout.db'))
+db = json.load(open('96-pinout.db'))
 
 
 def from_phys(phys, mode="bcm"):

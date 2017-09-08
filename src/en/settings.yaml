@@ -1,5 +1,5 @@
 domain: 96boards.org
-analytics_id: UA-69846516-1 #change?
+analytics_id: UA-69846516-1
 base_url: /pinout/
 resource_url: /resources/
 url_suffix:
@@ -15,13 +15,14 @@ overlays:
 - i2c
 - spi
 - uart
+#- pcm
+- arrow-link-sprite-mezzanine-kit
+- aero-core-2
 - d3-camera-mezzanine
 - grove-seeed-sensor-mezzanine
-- aero-core-2
 - ethernet-mezzanine
 - arrow-audio-mezzanine
 - mipi-adapter-mezzanine-aistarvision
 - stm32-sensor-mezzanine-board
 - uart-serial-mezzanine
 - neon-key-mezzanine
-- arrow-link-sprite-mezzanine-kit

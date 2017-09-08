@@ -1,5 +1,11 @@
-#PCM_DO
+### Signal:
+PCM_DO
 
-|Signal        |Description |V      |Type|
-| ------------- |:--------------:| -----:|------:|
-|PCM_DO     |PCM/I2S Serial data out | 1.8V |Output |
+### Description:
+PCM/I2S Serial data out
+
+### Voltage:
+1.8V
+
+### Type:
+Output
