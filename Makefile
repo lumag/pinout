@@ -25,3 +25,7 @@ clean:
 
 serve: all
 	./serve.py $(LANG)
+
+96boards: all
+	mv output/$(LANG)/*.html output/$(LANG)/pinout
+	mv output/$(LANG)/resources output/$(LANG)/pinout
