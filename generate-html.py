@@ -235,7 +235,7 @@ def load_overlay(overlay):
         details_image = ''
 
         if 'image' in loaded:
-            details_image = "<img src=\"/resources/boards/{}\" alt=\"{}\" />".format(loaded['image'],loaded['name'])
+            details_image = "<img src=\"/pinout/resources/boards/{}\" alt=\"{}\" />".format(loaded['image'],loaded['name'])
 
         details_html = "<table class=\"details\"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>".format(strings['details'],details_html,details_image)
 
@@ -515,7 +515,7 @@ for key, val in default_strings.items():
         strings[key] = val
 
 base_url = pinout.get_setting('base_url', '/pinout/')  # '/pinout-tr/pinout/'
-resource_url = pinout.get_setting('resource_url', '/resources/')  # '/pinout-tr/resources/'
+resource_url = pinout.get_setting('resource_url', '/pinout/resources/')  # '/pinout-tr/resources/'
 url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
 
 template_main = open('common/page.html'.format(lang)).read()
