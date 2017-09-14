@@ -658,7 +658,7 @@ if page404 is not None:
     navs['404'] = default_nav
 
 
-crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards.html">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
+crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/pinout/boards.html">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
 navs['boards'] = default_nav
 
@@ -732,20 +732,20 @@ for url in pages:
 
     body_class = ''
 
-    crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards.html">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
+    crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/pinout/boards.html">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
         body_class = 'board'
         if not 'collected' in pages[url]:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards.html">{boards}</a> &raquo; </p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/pinout/boards.html">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
                     #manufacturer=pages[url]['manufacturer'],
                     home=strings['home'],
                     boards=strings['boards']
                     )
         else:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards.html">{boards}</a> &raquo; </p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/pinout/boards.html">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
                     #manufacturer=pages[url]['collected'],
                     home=strings['home'],
