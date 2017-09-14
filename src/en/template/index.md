@@ -16,4 +16,4 @@ We've [added a board explorer](/pinout/boards.html)! Use it to find the pinout f
 
 We've whipped up a simple graphical 96Boards GPIO Pinout. 
 
-[![Graphical 96Boards Pinout](/resources/96Boards_pinout.png)](/pinout/resources/96Boards_pinout.png)
+[![Graphical 96Boards Pinout](/pinout/resources/96Boards_pinout.png)](/pinout/resources/96Boards_pinout.png)
