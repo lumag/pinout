@@ -1,5 +1,5 @@
 domain: 96boards.org/pinout
-analytics_id: UA-16756069-18
+analytics_id:
 base_url: /pinout/
 resource_url: /pinout/resources/
 url_suffix:
