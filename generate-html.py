@@ -738,14 +738,14 @@ for url in pages:
         feat_boards_html = ''
         body_class = 'board'
         if not 'collected' in pages[url]:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/pinout/boards.html">{boards}</a> &raquo; </p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/pinout">{home}</a> &raquo; <a href="/pinout/boards.html">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
                     #manufacturer=pages[url]['manufacturer'],
                     home=strings['home'],
                     boards=strings['boards']
                     )
         else:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/pinout/boards.html">{boards}</a> &raquo; </p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/pinout">{home}</a> &raquo; <a href="/pinout/boards.html">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
                     #manufacturer=pages[url]['collected'],
                     home=strings['home'],
