@@ -235,7 +235,7 @@ def load_overlay(overlay):
         details_image = ''
 
         if 'image' in loaded:
-            details_image = "<img src=\"/resources/boards/{}\" alt=\"{}\" />".format(loaded['image'],loaded['name'])
+            details_image = "<img src=\"/pinout/resources/boards/{}\" alt=\"{}\" />".format(loaded['image'],loaded['name'])
 
         details_html = "<table class=\"details\"><tr><td><h2>{}</h2>{}</td><td>{}</td></tr></table>".format(strings['details'],details_html,details_image)
 
@@ -435,7 +435,7 @@ def render_pin(pin_num, selected_url, overlay=None):
 
     pin_url = pin_url + url_suffix
 
-    return '<li class="pin{pin_num} {pin_type}{pin_selected}"><a href="{pin_url}" title="{pin_title}"><span class="default"><span class="phys">{pin_num}</span> {pin_name}</span><span class="pin"></span></a></li>\n'.format(
+    return '<li class="pin{pin_num} {pin_type}{pin_selected}"><a href="{pin_url}.html" title="{pin_title}"><span class="default"><span class="phys">{pin_num}</span> {pin_name}</span><span class="pin"></span></a></li>\n'.format(
         pin_num=pin_num,
         pin_type=' '.join(map(cssify, pin_type)),
         pin_selected=selected,
@@ -515,7 +515,7 @@ for key, val in default_strings.items():
         strings[key] = val
 
 base_url = pinout.get_setting('base_url', '/pinout/')  # '/pinout-tr/pinout/'
-resource_url = pinout.get_setting('resource_url', '/resources/')  # '/pinout-tr/resources/'
+resource_url = pinout.get_setting('resource_url', '/pinout/resources/')  # '/pinout-tr/resources/'
 url_suffix = pinout.get_setting('url_suffix', '')  # '.html'
 
 template_main = open('common/page.html'.format(lang)).read()
@@ -569,7 +569,7 @@ for overlay in overlays:
 
     if overlay['src'] in pinout.settings['featured'] and 'image' in overlay and featured_boards_count < 4:
         featured_boards_count += 1
-        featured_boards_html += '<div class="board"><a href="{base_url}{page_url}"><img alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
+        featured_boards_html += '<div class="board"><a href="{base_url}{page_url}.html"><img alt="{name}" src="{resource_url}boards/{image}" /><strong>{name}</strong><span>{description}</span></a></div>'.format(
                 image=overlay['image'],
                 name=overlay['name'],
                 page_url=overlay['page_url'],
@@ -585,7 +585,7 @@ for overlay in overlays:
         if o_class not in nav_html:
             nav_html[o_class] = ''
 
-        nav_html[o_class] += '<li><a href="{}{}">{}</a></li>'.format(base_url, overlay['page_url'], overlay['name'])
+        nav_html[o_class] += '<li><a href="{}{}.html">{}</a></li>'.format(base_url, overlay['page_url'], overlay['name'])
 
         if o_class == 'board':
             image = overlay['image'] if 'image' in overlay else 'no-image.png'
@@ -594,7 +594,7 @@ for overlay in overlays:
             #    print('Warning! -> {name} missing formfactor'.format(name=overlay['name']))
 
             if 'collected' not in overlay:
-                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" ><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" ><a href="{base_url}{page_url}.html"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=overlay['name'],
                     page_url=overlay['page_url'],
@@ -604,7 +604,7 @@ for overlay in overlays:
                     #manufacturer=overlay['manufacturer'],
                     resource_url=resource_url)})
             else:
-                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" ><a href="{base_url}{page_url}"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
+                boards_page.append({'name': overlay['name'], 'html': '<li class="board" data-type="{type}" ><a href="{base_url}{page_url}.html"><img src="{resource_url}boards/{image}" /><strong>{name}</strong></a></li>'.format(
                     image=image,
                     name=overlay['name'],
                     page_url=overlay['page_url'],
@@ -626,7 +626,7 @@ def interfaces_menu(current):
         if current is not None and 'name' in current and interface['name'] == current['name']:
             sel = ' class="selected"'
 
-        html += '<li{}><a href="{}{}">{}</a></li>'.format(sel, base_url, interface['page_url'], interface['name'])
+        html += '<li{}><a href="{}{}.html">{}</a></li>'.format(sel, base_url, interface['page_url'], interface['name'])
 
     return html
 
@@ -658,7 +658,7 @@ if page404 is not None:
     navs['404'] = default_nav
 
 
-crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
+crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards.html">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
 navs['boards'] = default_nav
 
@@ -732,20 +732,20 @@ for url in pages:
 
     body_class = ''
 
-    crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
+    crumbtrail = '<div id="crumbtrail"><p><a class="more" href="/boards.html">' + strings['browse_addons'] + ' &raquo;</a></p></div>'
 
     if 'class' in pages[url] and pages[url]['class'] == 'board':
         feat_boards_html = ''
         body_class = 'board'
         if not 'collected' in pages[url]:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; </p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards.html">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
                     #manufacturer=pages[url]['manufacturer'],
                     home=strings['home'],
                     boards=strings['boards']
                     )
         else:
-            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards">{boards}</a> &raquo; </p></div>'.format(
+            crumbtrail = '<div id="crumbtrail"><p><a href="/">{home}</a> &raquo; <a href="/boards.html">{boards}</a> &raquo; </p></div>'.format(
                     title=pages[url]['name'],
                     #manufacturer=pages[url]['collected'],
                     home=strings['home'],

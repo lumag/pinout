@@ -1,4 +1,3 @@
-output/
 *.py[cod]
 env/
 .DS_store
