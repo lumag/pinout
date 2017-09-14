@@ -6,7 +6,7 @@ This GPIO Pinout is designed to be both a quick and interactive reference to the
 
 ## Latest Pinout news
 
-We've [added a board explorer](/boards)! Use it to find the pinout for a 96Boards add-on board, or discover new ones. If you manufacture boards, we'd love to add yours too. [You can contribute over on GitHub](https://github.com/96boards/pinout).
+We've [added a board explorer](/pinout/boards.html)! Use it to find the pinout for a 96Boards add-on board, or discover new ones. If you manufacture boards, we'd love to add yours too. [You can contribute over on GitHub](https://github.com/96boards/pinout).
 
 ## What do these numbers mean?
 
@@ -16,4 +16,4 @@ We've [added a board explorer](/boards)! Use it to find the pinout for a 96Board
 
 We've whipped up a simple graphical 96Boards GPIO Pinout. 
 
-[![Graphical 96Boards Pinout](/resources/96Boards_pinout.png)](/resources/96Boards_pinout.png)
+[![Graphical 96Boards Pinout](/resources/96Boards_pinout.png)](/pinout/resources/96Boards_pinout.png)
