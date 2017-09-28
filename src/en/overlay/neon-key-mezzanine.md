@@ -47,9 +47,9 @@ pin:
     mode: gpio
   '18':
     mode: i2s
-  '22'
+  '22':
     mode: i2s
-  '18'
+  '18':
     mode: i2s
 
 -->
