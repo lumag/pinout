@@ -14,6 +14,8 @@ eeprom: no
 power:
   '35':
   '37':
+  '4':
+  '6':
 ground:
   '1':
   '2':
@@ -28,6 +30,21 @@ pin:
     mode: i2c
   '21':
     mode: i2c
+  '3':
+    mode: uart
+  '5':
+    mode: uart
+  '7':
+    mode: uart
+  '9':
+    mode: uart
+  '11':
+    mode: uart
+  '13':
+    mode: uart
+  '24':
+    mode: gpio
+
 
 -->
 
