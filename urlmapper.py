@@ -84,13 +84,13 @@ def generate_for_lang(lang="en"):
         if pin_url is None:
             continue
 
-        url_lookup['pin{}'.format(pin)] = '//{domain}/{url}'.format(domain=domain, url=pin_url)
+        url_lookup['pin{}'.format(pin)] = '//{domain}/{url}.html'.format(domain=domain, url=pin_url)
 
     for url in overlays:
         if url is None:
             continue
 
-        url_lookup['{}'.format(url[0])] = '//{domain}/{url}'.format(domain=domain, url=url[1])
+        url_lookup['{}'.format(url[0])] = '//{domain}/{url}.html'.format(domain=domain, url=url[1])
 
 
     url_lookup['index'] = '//{}'.format(domain)
