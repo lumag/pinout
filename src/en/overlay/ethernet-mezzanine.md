@@ -22,10 +22,10 @@ pin:
     mode: i2c
   '17':
     mode: i2c
-  '19':
-    mode: i2c
-  '21':
-    mode: i2c
+  '24':
+    mode: gpio
+  '26':
+    mode: gpio
 
 -->
 

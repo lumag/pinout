@@ -72,7 +72,6 @@ def generate_for_lang(lang="en"):
 
     overlays = pinout.settings['overlays']
 
-    base_url = pinout.get_setting('base_url', '/pinout/')
 
     domain = pinout.get_setting('domain', '96boards.org')
 
@@ -85,13 +84,13 @@ def generate_for_lang(lang="en"):
         if pin_url is None:
             continue
 
-        url_lookup['pin{}'.format(pin)] = '//{domain}{base_url}{url}'.format(domain=domain, base_url=base_url, url=pin_url)
+        url_lookup['pin{}'.format(pin)] = '//{domain}/{url}.html'.format(domain=domain, url=pin_url)
 
     for url in overlays:
         if url is None:
             continue
 
-        url_lookup['{}'.format(url[0])] = '//{domain}{base_url}{url}'.format(domain=domain, base_url=base_url, url=url[1])
+        url_lookup['{}'.format(url[0])] = '//{domain}/{url}.html'.format(domain=domain, url=url[1])
 
 
     url_lookup['index'] = '//{}'.format(domain)
