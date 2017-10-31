@@ -15,7 +15,6 @@ overlays:
 - i2c
 - spi
 - uart
-#- pcm
 - arrow-link-sprite-mezzanine-kit
 - aero-core-2
 - d3-camera-mezzanine
@@ -26,3 +25,4 @@ overlays:
 - stm32-sensor-mezzanine-board
 - uart-serial-mezzanine
 - neon-key-mezzanine
+- link-sprite-lora-mezzanine
