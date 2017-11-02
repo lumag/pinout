@@ -5,7 +5,7 @@ class: board
 type: Mezzanine
 description: The SX1276 transceivers feature the LoRa™ long range modem that provides ultra-long range spread spectrum communication and high interference immunity whilst minimizing current consumption.
 url: http://linksprite.com/wiki/index.php5?title=LoRa_Mezzanine_Card_for_96board
-github:
+github: http://linksprite.com/wiki/index.php5?title=LoRa_Mezzanine_Card_for_96board
 image: 'link-sprite-lora-mezzanine.png'
 pincount: 40
 eeprom: no
