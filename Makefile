@@ -23,7 +23,7 @@ devel: css all resources
 clean:
 	rm -rf output/$(LANG)/*
 
-serve: all
+serve: 96boards
 	./serve.py $(LANG)
 
 96boards: all
