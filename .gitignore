@@ -2,4 +2,4 @@
 env/
 .DS_store
 .sass-cache/
-
+output/
