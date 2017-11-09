@@ -38,8 +38,6 @@ MANDATORY
 * pin: an array of the pins used. Do not specify power or EEPROM pins as part of the array!
 
 DESIRABLE
-* pincount: the header pin count, typically 26 or 40 but shims/custom boards are acceptable.
-* eeprom: whether the board includes an eeprom (required by 'HAT' specs!).
 * power: the supply logic required by the board. Valid values are 'external', '3v3', '5v' and '3v3,5v'.
 * i2c: if the board uses i2c, a list of the bus address(es) and device(s) identification.
 

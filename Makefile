@@ -13,9 +13,10 @@ css:
 
 html:
 	./generate-html.py $(LANG)
+	mv output/$(LANG)/*.html output/$(LANG)/pinout
 
 resources:
-	cp -r resources output/$(LANG)/
+	cp -r resources output/$(LANG)/pinout
 
 devel: css all resources
 	./serve.py ${LANG}
@@ -23,9 +24,6 @@ devel: css all resources
 clean:
 	rm -rf output/$(LANG)/*
 
-serve: 96boards
+serve: all
 	./serve.py $(LANG)
 
-96boards: all
-	mv output/$(LANG)/*.html output/$(LANG)/pinout
-	mv output/$(LANG)/resources output/$(LANG)/pinout
