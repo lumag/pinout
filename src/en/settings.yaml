@@ -26,5 +26,4 @@ overlays:
 - uart-serial-mezzanine
 - neon-key-mezzanine
 - link-sprite-lora-mezzanine
-- myboard
 - neonkey_mezzanine
