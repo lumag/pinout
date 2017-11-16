@@ -13,6 +13,10 @@ if [ "$#" -eq 0 ]; then
     echo "please specify a board to publish!" && exit 1
 fi
 
+if [ "$1" == "template" ]; then
+    echo "please appropriately rename the board to publish!" && exit 1
+fi
+
 board=$1
 
 for dirmd in ${langlist[@]}; do

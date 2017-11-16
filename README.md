@@ -12,39 +12,40 @@ This license excludes the 'pinout-graphic-horizontal' files located in the `grap
 
 The contents of this GitHub repository are used to build www.96boards.org/pinout/ and its translated subdomains.
 
-This project aims to build a consistent workflow behind the 96Boards Pinout front-end, gather useful information about the 96Boards GPIO interface and add-on boards, and invite board manufacturers to produce their own "overlay" files which describe which pins their 96Boards add-ons use.
+This project aims to build a consistent work flow behind the 96Boards Pinout front-end, gather useful information about the 96Boards GPIO interface and add-on boards, and invite board manufacturers to produce their own "overlay" files which describe which pins their 96Boards add-ons use.
 
 We hope that by making this project open and extensible we will invite not only contributions of board pinouts, but translations too.
 
 # Reporting Issues & Making Suggestions
 
-If you've spotted an error, ommission or have a suggestion, raise an [issue](). Feedback on every aspect of the site or this repository is welcome!
+If you've spotted an error, omission or have a suggestion, raise an [issue](). Feedback on every aspect of the site or this repository is welcome!
 
 # Contributing
 
 If you have a board you'd like to contribute, the preferred method for submission is to create a modified version of the overlay [template]() and create a pull request. Please ensure the files you submit are being pushed to the `/draft` folder, where it will be reviewed before publication.
 
-Note that as part of the submission, a top-down view of the board in the form of a [png]() is expected. If you can't produce the png file yourself, just duplicate and rename `template.png` but make sure to include a url somewhere in the overlay where we can fetch a suitable graphic.
+Note that as part of the submission, a top-down view of the board in the form of a [png]() is required.
 
 Once your draft has been made, before filing a pull request, you should try to render the page and make sure it build and appears as intended. To do so:
+
+*note 1: you will need several python modules installed on your system to render and serve a local version of the site, run*  
+*`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
 
 ```bash
 draft/publish.sh myboard
 make LANG=en serve
 ```
-And then open: http://127.0.0.1:5000 in your browser.
+And then open: http://127.0.0.1:5000/pinout in your browser.
 
-Once you are happy with the result, 
+Once you are happy with the result,
 
 ```bash
 /draft/unpublish myboard
+make clean
 ```
 (this will file the overlay back into the draft folder, ready for review)
 
-*note 1: you will need several python modules installed on your system to render and serve a local version of the site, run*  
-*`pip install -r requirements.txt` from the top of the repository tree to install the required modules.*
-
-*note 2: if you are facing issues with your preview (board not showing, text update not appearing, etc.), you can fix it by erasing your browser's cache (image and cache file only).*
+*note: if you are facing issues with your preview (board not showing, text update not appearing, etc.), you can fix it by erasing your browser's cache (image and cache file only).*
 
 If you feel that the requirements for submissions is beyond your current possibilities, you may raise an issue requesting the addition of a specific board instead and we'll consider it!
 
@@ -64,7 +65,7 @@ Once you've made your translation, you can build and preview it with, for exampl
 make serve LANG=de
 ```
 
-And then open: http://127.0.0.1:5000 in your browser.
+And then open: http://127.0.0.1:5000/pinout in your browser.
 
 The last step will be to submit your finished translation as a pull request (this can include any number of boards, it does not have to be the entire line-up) and we'll get it live on its own *&lt;languagecode&gt;*.pinout.xyz subdomain.
 
@@ -79,7 +80,6 @@ If you have a question about translations, raise an issue and we'll be happy to 
 
 # Acknowledgement
 
-96Boards pinout: [radhikap18](https://github.com/radhikap18)
+96Boards pinout Maintainers: [radhikap18](https://github.com/radhikap18) and [ric96](https://github.com/ric96)
+
 Pinout.xyz Maintainers: [@Gadgetoid](https://github.com/Gadgetoid) and [@RogueM](https://github.com/RogueM)
-
-
