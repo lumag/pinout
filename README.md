@@ -80,6 +80,6 @@ If you have a question about translations, raise an issue and we'll be happy to 
 
 # Acknowledgement
 
-96Boards pinout Maintainers: [radhikap18](https://github.com/radhikap18) and [ric96](https://github.com/ric96)
+96Boards pinout Maintainers: [ric96](https://github.com/ric96)
 
 Pinout.xyz Maintainers: [@Gadgetoid](https://github.com/Gadgetoid) and [@RogueM](https://github.com/RogueM)
