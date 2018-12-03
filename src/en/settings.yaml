@@ -26,3 +26,6 @@ overlays:
 - uart-serial-mezzanine
 - neon-key-mezzanine
 - link-sprite-lora-mezzanine
+- nextbio
+- secure96
+- shiratech-lte
