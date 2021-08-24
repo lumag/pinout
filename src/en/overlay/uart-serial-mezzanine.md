@@ -22,14 +22,6 @@ ground:
   '39':
   '40':
 pin:
-  '15':
-    mode: i2c
-  '17':
-    mode: i2c
-  '19':
-    mode: i2c
-  '21':
-    mode: i2c
   '3':
     mode: uart
   '5':
